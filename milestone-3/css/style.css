@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#app {
+  width: 60%;
+  margin: 0 auto;  
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header img {
+  width: 40%;
+  padding-right: 20px;
+}
+
+header h1 {
+ font-size: 40px;
+}
+
+.input-box {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.input-box button {
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.list-content { 
+  border-radius: 10px;
+  background-color:rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;  
+  list-style: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all .5s;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li:hover{
+  background-color: white;
+}
+
+ul li i:hover {
+  color: #E44D26;
+}
+
+.deleted {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.deleted p {
+  text-decoration: line-through;
+}
