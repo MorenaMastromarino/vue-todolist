@@ -28,10 +28,12 @@
       
       <div class="list-content">
         <ul>
-          <li v-for="task in tasks"
+          <li v-for="(task, index) in tasks"
             :class="{deleted: task.done}">
             <p>{{task.text}}</p>
-            <i class="fas fa-times"></i>
+            <i @click="removeTask(index)"
+              class="fas fa-times">
+            </i>
           </li>             
         </ul>
       </div>
