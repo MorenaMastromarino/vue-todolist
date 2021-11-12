@@ -21,7 +21,8 @@
 
     <main>
       <div class="input-box">
-        <input 
+        <h4 v-if="error">Inserire un testo di almeno 3 caratteri</h4>
+        <input @keyup.enter="createNewTask"
           v-model="taskString"
           type="text" 
           placeholder="Cose da fare"
@@ -33,6 +34,7 @@
       <div class="list-content">
         <ul>
           <li v-for="(task, index) in tasks"
+            @click="task.done = !task.done"
             :class="{deleted: task.done}">
             <p>{{task.text}}</p>
             <i @click="removeTask(index)"

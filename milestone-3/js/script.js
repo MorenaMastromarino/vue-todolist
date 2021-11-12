@@ -22,6 +22,8 @@ const app = new Vue({
     ],
 
     taskString: '',
+
+    error: false,
   },
 
   methods: {
@@ -30,12 +32,18 @@ const app = new Vue({
     },
 
     createNewTask(){
-      const newTask = {
-        text: this.taskString,
-        done: false,
-      };
-      this.tasks.push(newTask);
-      this.taskString ='';
+      if(this.taskString.length < 3) {
+        this.error = true;
+        setTimeout(() => this.error = false, 3000);
+      }else {
+        const newTask = {
+          text: this.taskString,
+          done: false,
+        };
+
+        this.tasks.push(newTask);
+        this.taskString ='';
+      };      
     },
   },
 
