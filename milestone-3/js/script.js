@@ -18,13 +18,24 @@ const app = new Vue({
       {
         text: 'Fare esercizio',
         done: false,
-      }  
+      }, 
     ],
+
+    taskString: '',
   },
 
   methods: {
     removeTask(index){
       this.tasks.splice(index, 1);
+    },
+
+    createNewTask(){
+      const newTask = {
+        text: this.taskString,
+        done: false,
+      };
+      this.tasks.push(newTask);
+      this.taskString ='';
     },
   },
 

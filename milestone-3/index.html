@@ -21,8 +21,12 @@
 
     <main>
       <div class="input-box">
-        <input type="text" placeholder="Cose da fare">
-        <button>Aggiungi</button>
+        <input 
+          v-model="taskString"
+          type="text" 
+          placeholder="Cose da fare"
+        >
+        <button @click="createNewTask">Aggiungi</button>
       </div>
   
       
